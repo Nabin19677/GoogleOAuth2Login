@@ -1,6 +1,5 @@
-import express from 'express';
+import express from "express";
 import helmet from "helmet";
-import passport from "passport";
 import morgan from "morgan";
 import cors from "cors";
 
@@ -13,8 +12,7 @@ app.use(
   })
 );
 app.use(helmet());
-app.use(express.urlencoded({extended : true}));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(passport.initialize());
 
 export default app;
